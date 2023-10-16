@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(/images/Ceu\ background.gif);
+    overflow: hidden;
+    position: relative;
+}
+
+.game-board {
+    
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid #6e97a1;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.timer {
+    color: aliceblue;
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    padding: 20px;
+    border: 2px solid rgba(230, 247, 0, 0.144);
+    border-radius: 10px;
+    margin-left: 40rem;
+    margin-right: 40rem;
+   
+}
+
+.linha-timer {
+    border-bottom: 15px solid #6e97a1;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.elementos-footer a {
+    padding: 20px;
+}
+
+.elementos-footer {
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.096);
+}
+
+.github {
+    width: 2.3%;
+    position: relative;
+    bottom: 2.5px;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    width: 550px;
+    position: absolute;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.background {
+    z-index: -1;
+    position: relative;
+    bottom: 47rem;
+    overflow: hidden;
+    background-repeat: no-repeat
+}
+
+@keyframes pipe-animation {
+    from {
+       right: -80px;
+    }
+
+    to {
+      right: 100%;
+    }
+}
+
+@keyframes jump {
+
+   0% {
+    bottom: 0;
+   }
+
+   40% {
+    bottom: 180px;
+   }
+
+   50% {
+    bottom: 180px;
+   }
+
+   100% {
+    bottom: 0;
+   }
+
+}
+
+@keyframes clouds-animation {
+    from {
+       right: -550px;
+    }
+
+    to {
+      right: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+     body {
+        overflow: hidden;
+        overflow-y: hidden;
+        background-repeat: no-repeat
+     }
+
+     .background {
+        background-repeat: no-repeat;
+        width: 1%;   
+     }
+
+
+    .game-board {
+        height: 500px;
+    }
+
+    .timer {
+        text-align: center;
+        font-size: 2rem;
+        margin: 0;
+        position: relative;
+        border: none;
+    }
+
+    .pipe {
+        width: 50px;
+    }
+
+    .github {
+         width: 43px;
+    }
+
+    .mario {
+        width: 100px;
+    }
+
+    .clouds {
+        width: 300px;
+    }
+
+    @keyframes pipe-animation {
+        from {
+            right: -190px; 
+        }
+        to {
+            right: 100%;
+        }
+    }
+}
